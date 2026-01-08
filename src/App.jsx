@@ -1861,7 +1861,7 @@ export default function FinancePortfolio() {
         <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
           <h4 style={{ fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#666', marginBottom: '1.5rem', fontFamily: '"DM Sans", Helvetica, sans-serif' }}>Skills & Certifications</h4>
           <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
-            {['Financial Modeling', 'SQL & Database Design', 'Systems Analysis', 'Data Analysis', 'FP&A', 'Power BI', 'Bloomberg Terminal', 'Six Sigma'].map((skill, i) => (
+            {['Financial Modeling', 'SQL & Database Design', 'Systems Analysis', 'Data Analysis', 'FP&A', 'Professional Scrum Master', 'Power BI', 'Bloomberg Terminal', 'Six Sigma'].map((skill, i) => (
               <span key={i} style={{ fontSize: '0.8rem', letterSpacing: '0.05em', color: '#999', fontFamily: '"DM Sans", Helvetica, sans-serif' }}>{skill}</span>
             ))}
           </div>
