@@ -1849,7 +1849,7 @@ export default function FinancePortfolio() {
             </p>
           </div>
           <div style={{ fontFamily: '"DM Sans", Helvetica, sans-serif', fontWeight: 300, lineHeight: 1.8, color: '#aaa' }}>
-            <p style={{ marginTop: 0 }}>Recent graduate from Boston University with a BBA in Finance and Information Systems. My experience spans corporate finance, systems analysis, database design, and strategic analysis across diverse business environments.</p>
+            <p style={{ marginTop: 0 }}>Graduated from Boston University with a BBA in Finance and Information Systems. My experience spans corporate finance, systems analysis, database design, and strategic analysis across diverse business environments.</p>
             <p style={{ marginTop: '1.5rem' }}>I specialize in modeling, forecasting, systems design, and scenario analysis—helping teams evaluate tradeoffs and make data-driven decisions. Comfortable working cross-functionally with finance, operations, and leadership stakeholders.</p>
           </div>
         </div>
