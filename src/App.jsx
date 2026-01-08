@@ -11,7 +11,7 @@ const projects = [
     color: "#1a365d",
     files: [
       { name: "Investment Report", type: "pdf" },
-      { name: "Financial Model", type: "xlsx" }
+      { name: "P&G Financial Model", type: "xlsx" }
     ],
     detailedView: "pg"
   },
@@ -24,7 +24,7 @@ const projects = [
     tools: ["Excel", "Financial Modeling"],
     color: "#f97316",
     files: [
-      { name: "Financial Model", type: "xlsx" }
+      { name: "Nike Financial Model", type: "xlsx" }
     ],
     detailedView: "nike"
   },
@@ -38,7 +38,7 @@ const projects = [
     color: "#059669",
     files: [
       { name: "Investment Pitch", type: "pptx" },
-      { name: "Financial Model", type: "xlsx" }
+      { name: "Brookfield Financial Model", type: "xlsx" }
     ],
     detailedView: "brookfield"
   },
@@ -632,11 +632,13 @@ Our team recommended optimizing content production to prioritize development and
 
 // File URLs - Replace with actual URLs when deploying
 const fileUrls = {
-  "Investment Report": "https://drive.google.com/file/d/YOUR_PDF_FILE_ID/view",
-  "Financial Model": "https://drive.google.com/file/d/YOUR_EXCEL_FILE_ID/view",
-  "Investment Pitch": "https://drive.google.com/file/d/YOUR_PPTX_FILE_ID/view",
-  "System Documentation": "https://drive.google.com/file/d/YOUR_DREAMDROPS_PDF_ID/view",
-  "Strategy Presentation": "https://drive.google.com/file/d/YOUR_DISNEY_PPTX_ID/view"
+  "Investment Report": "https://drive.google.com/file/d/1pZvsbMu9phaOqst1wPWA0XhnDXTtxxOH/view?usp=drive_link",
+  "P&G Financial Model": "https://docs.google.com/spreadsheets/d/1lPjLkav9gMXBRqrL6wdlkeIqvK4EIfLM/edit?usp=drive_link&ouid=102480317172317890121&rtpof=true&sd=true",
+  "Nike Financial Model": "https://docs.google.com/spreadsheets/d/1IaooIZX6LgxC8-4DoMWQoHWPhD9i9H_S/edit?usp=drive_link&ouid=102480317172317890121&rtpof=true&sd=true",
+  "Investment Pitch": "https://docs.google.com/presentation/d/1xGYbFOts1zMvHF-5WTRh3bOOojE5y5ps/edit?usp=drive_link&ouid=102480317172317890121&rtpof=true&sd=true",
+  "Brookfield Financial Model": "https://docs.google.com/spreadsheets/d/18MqXUrVuEH29TS1TTy-SIlOWaHICSIcw/edit?usp=drive_link&ouid=102480317172317890121&rtpof=true&sd=true",
+  "System Documentation": "https://drive.google.com/file/d/1vlZ79WfsyCf8ITibZv9VpydRqsdikn-3/view?usp=drive_link",
+  "Strategy Presentation": "https://drive.google.com/file/d/1_btXI81QnRIYMds6hozvQDFKXRnjR8wC/view?usp=drive_link"
 };
 
 export default function FinancePortfolio() {
