@@ -632,7 +632,7 @@ Our team recommended optimizing content production to prioritize development and
 
 // File URLs - Replace with actual URLs when deploying
 const fileUrls = {
-  "Investment Report": "https://drive.google.com/file/d/1pZvsbMu9phaOqst1wPWA0XhnDXTtxxOH/view?usp=drive_link",
+  "Investment Report": "https://drive.google.com/file/d/1tDvleb14fpczs_2gG53O1WDiYaNPKhQp/view?usp=drive_link",
   "P&G Financial Model": "https://docs.google.com/spreadsheets/d/1lPjLkav9gMXBRqrL6wdlkeIqvK4EIfLM/edit?usp=drive_link&ouid=102480317172317890121&rtpof=true&sd=true",
   "Nike Financial Model": "https://docs.google.com/spreadsheets/d/1IaooIZX6LgxC8-4DoMWQoHWPhD9i9H_S/edit?usp=drive_link&ouid=102480317172317890121&rtpof=true&sd=true",
   "Investment Pitch": "https://docs.google.com/presentation/d/1xGYbFOts1zMvHF-5WTRh3bOOojE5y5ps/edit?usp=drive_link&ouid=102480317172317890121&rtpof=true&sd=true",
