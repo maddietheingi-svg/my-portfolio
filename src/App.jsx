@@ -65,6 +65,20 @@ const projects = [
     color: "#2563eb",
     files: [],
     detailedView: "gymdb"
+  },
+  {
+    id: 6,
+    title: "NBA Tunnel Fit Influence Score (TFIS)",
+    category: "Strategy Consulting",
+    description: "Developed a data-driven framework for optimizing NBA fashion sponsorship ROI. Built composite scoring model weighing 6 factors including demand lift, engagement, and virality. Analysis revealed only 19% of athletes are 'Converters' who deliver 4.3× the demand lift of high-engagement 'Entertainers' — identifying hidden value in the $66B sports sponsorship market.",
+    metrics: ["4.3× Converter Premium", "19% True Converters", "6-Factor Model"],
+    tools: ["Python", "Pandas", "Data Visualization", "PowerPoint"],
+    color: "#f97316",
+    files: [
+      { name: "Analysis Code", type: "ipynb" },
+      { name: "Consulting Deck", type: "pdf" }
+    ],
+    detailedView: "tfis"
   }
 ];
 
@@ -487,6 +501,104 @@ AND (
   ]
 };
 
+// TFIS (Tunnel Fit Influence Score) Project Data
+const tfisData = {
+  projectOverview: `Developed a data-driven framework for optimizing NBA fashion sponsorship ROI by creating the Tunnel Fit Influence Score (TFIS) — a composite metric that identifies which athletes actually drive purchase behavior versus those who merely generate engagement.
+
+The analysis revealed that brands are systematically overpaying for high-reach "Entertainers" while undervaluing "Converters" who deliver 4.3× the demand lift at similar engagement rates. This insight enables a 15-25% improvement in sponsorship ROI.`,
+  market: {
+    sponsorshipMarket: 66,
+    projectedMarket: 108,
+    athleteROI: 7,
+    purchaseLift: 164,
+    genZPurchase: 49
+  },
+  tfisFormula: {
+    reach: { weight: 15, description: "Total follower reach across platforms" },
+    engagement: { weight: 20, description: "Weighted engagement score per post" },
+    virality: { weight: 15, description: "Frequency of viral content creation" },
+    demand: { weight: 25, description: "Search lift in post window" },
+    conversion: { weight: 15, description: "Consistency of demand generation" },
+    authenticity: { weight: 10, description: "Brand fit score" }
+  },
+  keyFindings: [
+    { metric: "Power Law", value: "93%", description: "of impressions from top 20% of players" },
+    { metric: "Converter Rate", value: "19%", description: "of players are true Converters" },
+    { metric: "Demand Premium", value: "4.3×", description: "demand lift vs Entertainers" },
+    { metric: "TFIS Range", value: "6.7-64.2", description: "significant value variation" }
+  ],
+  playerSegments: [
+    { 
+      name: "Converters",
+      demandLift: 0.68,
+      engagementRate: 8.2,
+      description: "High demand lift, variable engagement — sponsor these first for ROI",
+      color: "#2E86AB"
+    },
+    {
+      name: "Entertainers", 
+      demandLift: 0.16,
+      engagementRate: 8.5,
+      description: "High engagement, low demand — good for awareness campaigns only",
+      color: "#A23B72"
+    },
+    {
+      name: "Underperformers",
+      demandLift: 0.08,
+      engagementRate: 4.2,
+      description: "Low on both metrics — avoid or renegotiate contracts",
+      color: "#888888"
+    }
+  ],
+  archetypes: [
+    { name: "Bold Experimenter", bestFor: "Conversion", brands: "Off-White, Rick Owens", demandIndex: 1.0, engagementIndex: 0.95 },
+    { name: "Street Luxe", bestFor: "Balanced", brands: "Fear of God, Amiri", demandIndex: 0.7, engagementIndex: 0.8 },
+    { name: "Classic Refined", bestFor: "Awareness", brands: "Tom Ford, Brioni", demandIndex: 0.3, engagementIndex: 0.85 },
+    { name: "Athleisure", bestFor: "Volume", brands: "Nike, Jordan Brand", demandIndex: 0.4, engagementIndex: 0.3 },
+    { name: "Minimalist", bestFor: "Niche", brands: "The Row, Lemaire", demandIndex: 0.3, engagementIndex: 0.4 }
+  ],
+  recommendations: [
+    { 
+      title: "Institutionalize TFIS",
+      description: "Integrate scoring into quarterly sponsorship reviews. Establish baseline metrics and tracking cadence."
+    },
+    {
+      title: "Rebalance Portfolio", 
+      description: "Shift 40% of tunnel budget from Entertainers to Converters. Maintain 60% in reach athletes for awareness."
+    },
+    {
+      title: "Design Activation Packages",
+      description: "Bundle product tagging, affiliate links, and drop tie-ins to maximize demand capture."
+    }
+  ],
+  allocation: {
+    reach: 60,
+    converters: 40
+  },
+  pilot: {
+    duration: 60,
+    investment: 150000,
+    expectedROI: { conservative: 15, expected: 20, optimistic: 25 },
+    successCriteria: [
+      { metric: "Demand Lift", target: "≥ 0.5", baseline: "0.16" },
+      { metric: "Cost-per-Search", target: "≤ $0.50", baseline: "$1.20" },
+      { metric: "Attribution Confidence", target: "≥ 80%", baseline: "N/A" }
+    ]
+  },
+  topPlayers: [
+    { name: "LaMelo Rodriguez", score: 64.2, type: "Converter" },
+    { name: "Ja Lewis", score: 60.5, type: "Converter" },
+    { name: "Keegan Perez", score: 56.1, type: "Entertainer" },
+    { name: "Victor Roberts", score: 55.8, type: "Converter" },
+    { name: "Isaiah Martin", score: 55.0, type: "Entertainer" }
+  ],
+  brandInsights: {
+    topBrand: "Fear of God",
+    topBrandShare: 15.3,
+    mostEfficient: "Balenciaga"
+  }
+};
+
 // File URLs - Replace with actual URLs when deploying
 const fileUrls = {
   "Investment Report": "https://drive.google.com/file/d/1tDvleb14fpczs_2gG53O1WDiYaNPKhQp/view?usp=drive_link",
@@ -494,7 +606,9 @@ const fileUrls = {
   "Nike Financial Model": "https://docs.google.com/spreadsheets/d/1IaooIZX6LgxC8-4DoMWQoHWPhD9i9H_S/edit?usp=drive_link&ouid=102480317172317890121&rtpof=true&sd=true",
   "Investment Pitch": "https://docs.google.com/presentation/d/1xGYbFOts1zMvHF-5WTRh3bOOojE5y5ps/edit?usp=drive_link&ouid=102480317172317890121&rtpof=true&sd=true",
   "Brookfield Financial Model": "https://docs.google.com/spreadsheets/d/18MqXUrVuEH29TS1TTy-SIlOWaHICSIcw/edit?usp=drive_link&ouid=102480317172317890121&rtpof=true&sd=true",
-  "System Documentation": "https://drive.google.com/file/d/1vlZ79WfsyCf8ITibZv9VpydRqsdikn-3/view?usp=drive_link"
+  "System Documentation": "https://drive.google.com/file/d/1vlZ79WfsyCf8ITibZv9VpydRqsdikn-3/view?usp=drive_link",
+  "Analysis Code": "https://colab.research.google.com/drive/1nViohUCNzO6tu3MT9uiHPtKDx8H4JV-k?usp=sharing",
+  "Consulting Deck": "https://drive.google.com/file/d/1brBBS6dcbVQBcSR2P9u8t04nXGgj4IO3/view?usp=drive_link"
 };
 
 export default function FinancePortfolio() {
@@ -1412,6 +1526,249 @@ export default function FinancePortfolio() {
     </div>
   );
 
+  // TFIS (Tunnel Fit Influence Score) Detailed View Component
+  const TFISDetailedView = () => (
+    <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.85)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2rem', overflow: 'auto' }} onClick={() => setShowDetailedView(null)}>
+      <div style={{ background: '#fff', borderRadius: '12px', maxWidth: '1100px', width: '100%', maxHeight: '90vh', overflow: 'auto', position: 'relative' }} onClick={e => e.stopPropagation()}>
+        <div style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #f97316 100%)', padding: '2rem 2.5rem', color: '#fff', position: 'sticky', top: 0, zIndex: 10 }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+            <div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.5rem' }}>
+                <p style={{ fontSize: '0.75rem', letterSpacing: '0.15em', textTransform: 'uppercase', opacity: 0.8, margin: 0, fontFamily: '"DM Sans", sans-serif' }}>Strategy Consulting</p>
+                <span style={{ background: 'rgba(255,255,255,0.2)', padding: '0.25rem 0.75rem', borderRadius: '4px', fontSize: '0.7rem', fontWeight: 600 }}>FASHION × SPORTS ANALYTICS</span>
+              </div>
+              <h2 style={{ fontSize: '1.8rem', fontWeight: 500, margin: 0, fontFamily: '"DM Sans", sans-serif' }}>Tunnel Fit Influence Score (TFIS)</h2>
+              <p style={{ fontSize: '0.9rem', opacity: 0.9, margin: '0.5rem 0 0', fontFamily: '"DM Sans", sans-serif' }}>Data-Driven NBA Fashion Sponsorship Optimization</p>
+            </div>
+            <button onClick={() => setShowDetailedView(null)} style={{ background: 'rgba(255,255,255,0.2)', border: 'none', color: '#fff', width: '36px', height: '36px', borderRadius: '50%', cursor: 'pointer', fontSize: '1.25rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>×</button>
+          </div>
+        </div>
+
+        <div style={{ padding: '2rem 2.5rem', fontFamily: '"DM Sans", sans-serif' }}>
+          {/* Executive Summary */}
+          <div style={{ marginBottom: '2.5rem' }}>
+            <h3 style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888', marginBottom: '1rem' }}>Executive Summary</h3>
+            <div style={{ background: '#fff7ed', padding: '1.5rem', borderRadius: '8px', border: '1px solid #fed7aa', borderLeft: '4px solid #f97316' }}>
+              <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: '#444', margin: 0, whiteSpace: 'pre-line' }}>{tfisData.projectOverview}</p>
+            </div>
+          </div>
+
+          {/* Market Opportunity */}
+          <div style={{ marginBottom: '2.5rem' }}>
+            <h3 style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888', marginBottom: '1rem' }}>Market Opportunity</h3>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '1rem' }}>
+              {[
+                { label: "Sponsorship Market", value: `$${tfisData.market.sponsorshipMarket}B`, color: "#f97316" },
+                { label: "Projected 2030", value: `$${tfisData.market.projectedMarket}B`, color: "#059669" },
+                { label: "Athlete ROI", value: `${tfisData.market.athleteROI}×`, color: "#2563eb" },
+                { label: "Purchase Lift", value: `${tfisData.market.purchaseLift}%`, color: "#7c3aed" },
+                { label: "Gen Z Influence", value: `${tfisData.market.genZPurchase}%`, color: "#dc2626" }
+              ].map((metric, i) => (
+                <div key={i} style={{ textAlign: 'center', padding: '1rem', background: '#f8fafc', borderRadius: '8px' }}>
+                  <p style={{ fontSize: '1.5rem', fontWeight: 600, color: metric.color, margin: 0 }}>{metric.value}</p>
+                  <p style={{ fontSize: '0.75rem', color: '#666', margin: '0.25rem 0 0' }}>{metric.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* TFIS Formula */}
+          <div style={{ marginBottom: '2.5rem' }}>
+            <h3 style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888', marginBottom: '1rem' }}>The TFIS Framework</h3>
+            <div style={{ background: '#1a1a2e', padding: '1.5rem', borderRadius: '8px', marginBottom: '1rem' }}>
+              <p style={{ fontFamily: 'monospace', fontSize: '0.9rem', color: '#f97316', margin: 0, textAlign: 'center' }}>
+                TFIS = 0.15(R) + 0.20(E) + 0.15(V) + <span style={{ color: '#22c55e', fontWeight: 'bold' }}>0.25(D)</span> + 0.15(C) + 0.10(A)
+              </p>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '0.75rem' }}>
+              {Object.entries(tfisData.tfisFormula).map(([key, data], i) => (
+                <div key={i} style={{ background: key === 'demand' ? '#dcfce7' : '#f8fafc', padding: '1rem', borderRadius: '8px', border: key === 'demand' ? '2px solid #22c55e' : '1px solid #e2e8f0' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
+                    <span style={{ fontSize: '0.8rem', fontWeight: 600, color: '#333', textTransform: 'capitalize' }}>{key}</span>
+                    <span style={{ fontSize: '0.75rem', fontWeight: 700, color: key === 'demand' ? '#16a34a' : '#f97316' }}>{data.weight}%</span>
+                  </div>
+                  <p style={{ fontSize: '0.7rem', color: '#666', margin: 0 }}>{data.description}</p>
+                </div>
+              ))}
+            </div>
+            <p style={{ fontSize: '0.85rem', color: '#666', margin: '1rem 0 0', fontStyle: 'italic', textAlign: 'center' }}>Demand weighted at 25% because purchase behavior is the only outcome that matters for sponsors</p>
+          </div>
+
+          {/* Key Findings */}
+          <div style={{ marginBottom: '2.5rem' }}>
+            <h3 style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888', marginBottom: '1rem' }}>Key Findings</h3>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem' }}>
+              {tfisData.keyFindings.map((finding, i) => (
+                <div key={i} style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%)', padding: '1.25rem', borderRadius: '8px', color: '#fff' }}>
+                  <p style={{ fontSize: '2rem', fontWeight: 700, color: '#f97316', margin: 0 }}>{finding.value}</p>
+                  <p style={{ fontSize: '0.9rem', fontWeight: 600, margin: '0.25rem 0', color: '#fff' }}>{finding.metric}</p>
+                  <p style={{ fontSize: '0.75rem', color: '#a0aec0', margin: 0 }}>{finding.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Player Segments */}
+          <div style={{ marginBottom: '2.5rem' }}>
+            <h3 style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888', marginBottom: '1rem' }}>Player Segmentation: Converters vs Entertainers</h3>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
+              {tfisData.playerSegments.map((segment, i) => (
+                <div key={i} style={{ padding: '1.5rem', borderRadius: '8px', border: `2px solid ${segment.color}`, background: `${segment.color}10` }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+                    <h4 style={{ fontSize: '1.1rem', fontWeight: 600, color: segment.color, margin: 0 }}>{segment.name}</h4>
+                    <span style={{ background: segment.color, color: '#fff', padding: '0.25rem 0.75rem', borderRadius: '4px', fontSize: '0.7rem', fontWeight: 600 }}>
+                      {segment.demandLift} Demand Lift
+                    </span>
+                  </div>
+                  <div style={{ display: 'flex', gap: '2rem', marginBottom: '1rem' }}>
+                    <div>
+                      <p style={{ fontSize: '1.5rem', fontWeight: 700, color: segment.color, margin: 0 }}>{segment.demandLift}</p>
+                      <p style={{ fontSize: '0.7rem', color: '#666', margin: 0 }}>Avg Demand Lift</p>
+                    </div>
+                    <div>
+                      <p style={{ fontSize: '1.5rem', fontWeight: 700, color: '#666', margin: 0 }}>{segment.engagementRate}%</p>
+                      <p style={{ fontSize: '0.7rem', color: '#666', margin: 0 }}>Engagement Rate</p>
+                    </div>
+                  </div>
+                  <p style={{ fontSize: '0.85rem', color: '#555', margin: 0 }}>{segment.description}</p>
+                </div>
+              ))}
+            </div>
+            <div style={{ background: '#fef3c7', padding: '1rem', borderRadius: '8px', marginTop: '1rem', textAlign: 'center' }}>
+              <p style={{ fontSize: '0.9rem', fontWeight: 600, color: '#92400e', margin: 0 }}>⚠️ Entertainers receive 60% of sponsorship spend but deliver only 25% of demand lift</p>
+            </div>
+          </div>
+
+          {/* Style Archetypes */}
+          <div style={{ marginBottom: '2.5rem' }}>
+            <h3 style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888', marginBottom: '1rem' }}>Style Archetypes: Match to Campaign Goal</h3>
+            <div style={{ overflowX: 'auto' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.85rem' }}>
+                <thead>
+                  <tr style={{ background: '#1a1a2e', color: '#fff' }}>
+                    <th style={{ padding: '0.75rem', textAlign: 'left' }}>Archetype</th>
+                    <th style={{ padding: '0.75rem', textAlign: 'center' }}>Best For</th>
+                    <th style={{ padding: '0.75rem', textAlign: 'left' }}>Brand Fit</th>
+                    <th style={{ padding: '0.75rem', textAlign: 'center' }}>Demand</th>
+                    <th style={{ padding: '0.75rem', textAlign: 'center' }}>Engagement</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {tfisData.archetypes.map((arch, i) => (
+                    <tr key={i} style={{ background: i % 2 === 0 ? '#f8fafc' : '#fff', borderBottom: '1px solid #e2e8f0' }}>
+                      <td style={{ padding: '0.75rem', fontWeight: 600 }}>{arch.name}</td>
+                      <td style={{ padding: '0.75rem', textAlign: 'center' }}>
+                        <span style={{ background: arch.bestFor === 'Conversion' ? '#dcfce7' : arch.bestFor === 'Awareness' ? '#dbeafe' : '#f3f4f6', padding: '0.25rem 0.5rem', borderRadius: '4px', fontSize: '0.75rem' }}>{arch.bestFor}</span>
+                      </td>
+                      <td style={{ padding: '0.75rem', color: '#666' }}>{arch.brands}</td>
+                      <td style={{ padding: '0.75rem', textAlign: 'center' }}>
+                        <div style={{ background: '#e2e8f0', borderRadius: '4px', height: '8px', width: '60px', margin: '0 auto' }}>
+                          <div style={{ background: '#f97316', borderRadius: '4px', height: '100%', width: `${arch.demandIndex * 100}%` }} />
+                        </div>
+                      </td>
+                      <td style={{ padding: '0.75rem', textAlign: 'center' }}>
+                        <div style={{ background: '#e2e8f0', borderRadius: '4px', height: '8px', width: '60px', margin: '0 auto' }}>
+                          <div style={{ background: '#2563eb', borderRadius: '4px', height: '100%', width: `${arch.engagementIndex * 100}%` }} />
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Recommendations */}
+          <div style={{ marginBottom: '2.5rem' }}>
+            <h3 style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888', marginBottom: '1rem' }}>Strategic Recommendations</h3>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
+              {tfisData.recommendations.map((rec, i) => (
+                <div key={i} style={{ background: '#f8fafc', padding: '1.5rem', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
+                    <span style={{ background: '#f97316', color: '#fff', width: '28px', height: '28px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.85rem', fontWeight: 700 }}>0{i + 1}</span>
+                    <h4 style={{ fontSize: '1rem', fontWeight: 600, color: '#1a1a2e', margin: 0 }}>{rec.title}</h4>
+                  </div>
+                  <p style={{ fontSize: '0.85rem', color: '#555', margin: 0, lineHeight: 1.6 }}>{rec.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Budget Allocation */}
+          <div style={{ marginBottom: '2.5rem' }}>
+            <h3 style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888', marginBottom: '1rem' }}>Recommended Budget Allocation</h3>
+            <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1rem', height: '50px', borderRadius: '8px', overflow: 'hidden' }}>
+              <div style={{ width: '60%', background: '#2563eb', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 600 }}>60% Reach Athletes</div>
+              <div style={{ width: '40%', background: '#f97316', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 600 }}>40% Converters</div>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+              <div style={{ background: '#eff6ff', padding: '1rem', borderRadius: '8px' }}>
+                <p style={{ fontSize: '0.85rem', fontWeight: 600, color: '#2563eb', margin: '0 0 0.5rem' }}>60% Reach Athletes (Awareness)</p>
+                <ul style={{ margin: 0, paddingLeft: '1.25rem', fontSize: '0.8rem', color: '#555' }}>
+                  <li>Ensures brand visibility baseline</li>
+                  <li>Maintains awareness coverage</li>
+                  <li>Diversification across archetypes</li>
+                </ul>
+              </div>
+              <div style={{ background: '#fff7ed', padding: '1rem', borderRadius: '8px' }}>
+                <p style={{ fontSize: '0.85rem', fontWeight: 600, color: '#f97316', margin: '0 0 0.5rem' }}>40% Converters (Demand)</p>
+                <ul style={{ margin: 0, paddingLeft: '1.25rem', fontSize: '0.8rem', color: '#555' }}>
+                  <li>Captures demand lift premium</li>
+                  <li>Drives measurable ROI</li>
+                  <li>Higher cost-per-impression, lower cost-per-conversion</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Pilot Proposal */}
+          <div style={{ marginBottom: '2rem' }}>
+            <h3 style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888', marginBottom: '1rem' }}>60-Day Pilot Proposal</h3>
+            <div style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%)', padding: '1.5rem', borderRadius: '8px', color: '#fff' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
+                <div>
+                  <p style={{ fontSize: '0.75rem', color: '#a0aec0', margin: 0 }}>Pilot Investment</p>
+                  <p style={{ fontSize: '2rem', fontWeight: 700, color: '#f97316', margin: 0 }}>${(tfisData.pilot.investment / 1000)}K</p>
+                </div>
+                <div>
+                  <p style={{ fontSize: '0.75rem', color: '#a0aec0', margin: 0 }}>Expected ROI Improvement</p>
+                  <p style={{ fontSize: '2rem', fontWeight: 700, color: '#22c55e', margin: 0 }}>{tfisData.pilot.expectedROI.expected}%</p>
+                </div>
+                <div>
+                  <p style={{ fontSize: '0.75rem', color: '#a0aec0', margin: 0 }}>Duration</p>
+                  <p style={{ fontSize: '2rem', fontWeight: 700, color: '#fff', margin: 0 }}>{tfisData.pilot.duration} Days</p>
+                </div>
+              </div>
+              <div>
+                <p style={{ fontSize: '0.8rem', color: '#a0aec0', margin: '0 0 0.75rem' }}>Success Criteria</p>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '0.75rem' }}>
+                  {tfisData.pilot.successCriteria.map((criteria, i) => (
+                    <div key={i} style={{ background: 'rgba(255,255,255,0.1)', padding: '0.75rem', borderRadius: '6px' }}>
+                      <p style={{ fontSize: '0.75rem', color: '#a0aec0', margin: '0 0 0.25rem' }}>{criteria.metric}</p>
+                      <p style={{ fontSize: '1rem', fontWeight: 600, color: '#22c55e', margin: 0 }}>{criteria.target}</p>
+                      <p style={{ fontSize: '0.7rem', color: '#666', margin: '0.25rem 0 0' }}>Baseline: {criteria.baseline}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Download Buttons */}
+          <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid #e2e8f0', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <button onClick={(e) => handleFileClick(e, 'Analysis Code')} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', background: '#1a1a2e', color: '#fff', border: 'none', padding: '0.875rem 1.5rem', borderRadius: '8px', cursor: 'pointer', fontSize: '0.9rem', fontWeight: 500, fontFamily: '"DM Sans", sans-serif' }}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><path d="M10 12l-2 2 2 2"/><path d="M14 12l2 2-2 2"/></svg>
+              View Analysis Code (Python)
+            </button>
+            <button onClick={(e) => handleFileClick(e, 'Consulting Deck')} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', background: '#f97316', color: '#fff', border: 'none', padding: '0.875rem 1.5rem', borderRadius: '8px', cursor: 'pointer', fontSize: '0.9rem', fontWeight: 500, fontFamily: '"DM Sans", sans-serif' }}>
+              {getFileIcon('pdf')} View Consulting Deck (PDF)
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <div style={{ minHeight: '100vh', background: 'linear-gradient(180deg, #faf9f7 0%, #f5f3f0 100%)', fontFamily: '"Cormorant Garamond", Georgia, serif', color: '#1a1a1a', position: 'relative', overflow: 'hidden' }}>
       {showDetailedView === 'pg' && <PGDetailedView />}
@@ -1419,6 +1776,7 @@ export default function FinancePortfolio() {
       {showDetailedView === 'brookfield' && <BrookfieldDetailedView />}
       {showDetailedView === 'dreamdrops' && <DreamDropsDetailedView />}
       {showDetailedView === 'gymdb' && <GymDbDetailedView />}
+      {showDetailedView === 'tfis' && <TFISDetailedView />}
 
       <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`, opacity: 0.03, pointerEvents: 'none', zIndex: 0 }} />
 
