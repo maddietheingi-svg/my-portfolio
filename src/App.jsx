@@ -608,7 +608,7 @@ const fileUrls = {
   "Brookfield Financial Model": "https://docs.google.com/spreadsheets/d/18MqXUrVuEH29TS1TTy-SIlOWaHICSIcw/edit?usp=drive_link&ouid=102480317172317890121&rtpof=true&sd=true",
   "System Documentation": "https://drive.google.com/file/d/1vlZ79WfsyCf8ITibZv9VpydRqsdikn-3/view?usp=drive_link",
   "Analysis Code": "https://colab.research.google.com/drive/1nViohUCNzO6tu3MT9uiHPtKDx8H4JV-k?usp=sharing",
-  "Consulting Deck": "https://drive.google.com/file/d/1brBBS6dcbVQBcSR2P9u8t04nXGgj4IO3/view?usp=drive_link"
+  "Consulting Deck": "https://drive.google.com/file/d/1NynIwvDg6RWyfSqF0KboZvxwDqshFndt/view?usp=sharing"
 };
 
 export default function FinancePortfolio() {
